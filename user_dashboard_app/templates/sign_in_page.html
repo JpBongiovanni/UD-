@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Page</title>
+</head>
+<body>
+    <div>
+        <h1>Sign In</h1>
+        <form action="user_info" method="POST">
+        {% csrf_token %}
+            Email Address: <input type="text" name="email">
+            Password: <input type="text" name="password">
+            <button type="submit" value="Sign In">Sign In</button>
+        </form>
+        <p><a href="register">Don't have an account? Register</a></p>
+        <p><a href="admin_dashboard">Admin Dashboard (remove later)</a></p>
+    </div>
+</body>
+</html>

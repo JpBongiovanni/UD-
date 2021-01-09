@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+</head>
+<body>
+    <div>
+        <h1>User Name in Request.session</h1>
+        <p>Registered at:</p>
+        <p>User ID:</p>
+        <p>Email Address:</p>
+        <p>Description:</p>
+        <p><a href="user_dashboard">Go to user dashboard</a></p>
+        <p><a href="edit_user">Edit User Information</a></p>
+        <p><a href='sign_in'>Sign Out</a></p>
+    </div>
+    <div>
+        <form action="user_info" method="POST">
+        {% csrf_token %}
+            <h1>Leave a message for __________</h1>
+            <button type="submit">Post</button>
+        </form>
+    </div>
+</body>
+</html>
